@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    margin-top: 50px;
+    font-family: Arial, sans-serif;
+}
+
+#image-preview {
+    max-width: 90%;
+    height: auto;
+    border: 1px solid #ddd;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+#image-input {
+    margin-top: 20px;
+}
