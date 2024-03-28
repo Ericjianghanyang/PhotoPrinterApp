@@ -1,19 +1,3 @@
-document.getElementById('image-input').addEventListener('change', function(event) {
-    var file = event.target.files[0];
-    var reader = new FileReader();
-    
-    reader.onload = function(e) {
-        var img = document.getElementById('image-preview');
-        var printButton = document.getElementById('print-button');
-        
-        img.src = e.target.result;
-        img.style.display = 'block';
-        printButton.style.display = 'block';
-    };
-    
-    reader.readAsDataURL(file);
-});
-
 document.getElementById('print-button').addEventListener('click', function() {
     var fileInput = document.getElementById('image-input');
     var file = fileInput.files[0];
@@ -22,7 +6,7 @@ document.getElementById('print-button').addEventListener('click', function() {
     formData.append('photo', file);
     
     // 发送照片信息到后端
-    fetch('/print', {
+    fetch('http://fe80::c84f:d9f8:b3e6:64a0%39:5000/print', {
         method: 'POST',
         body: formData
     })
