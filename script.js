@@ -29,7 +29,7 @@ document.getElementById('print-button').addEventListener('click', function() {
     formData.append('photo', file);
     
     // 发送照片信息到后端
-    fetch('http://fe80::c84f:d9f8:b3e6:64a0%39:5000/print', {
+    fetch('http://172.16.1.106:5000/print', {
         method: 'POST',
         body: formData
     })
