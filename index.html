@@ -14,10 +14,12 @@
         <div class="upload-container">
             <label for="image-input" class="upload-button">选择图片</label>
             <input type="file" id="image-input" accept="image/*"/>
-            <button id="print-button" style="display: none;">打印照片</button>
+            <button id="print-button" class="upload-button" style="display: none;">打印照片</button>
         </div>
         <div class="preview-container">
-            <img id="image-preview" alt="图片预览"/>
+            <div class="image-frame">
+                <img id="image-preview" alt="图片预览"/>
+            </div>
         </div>
     </main>
     <footer>
