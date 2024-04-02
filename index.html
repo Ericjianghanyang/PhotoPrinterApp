@@ -7,10 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>欢迎到我们的照片打印应用！</h1>
-    <input type="file" id="image-input" accept="image/*"/>
-    <button id="print-button" style="display: none;">打印照片</button>
-    <img id="image-preview" style="display: none;"/>
+    <header>
+        <h1>欢迎来到我们的照片打印应用！</h1>
+    </header>
+    <main>
+        <div class="upload-container">
+            <label for="image-input" class="upload-button">选择图片</label>
+            <input type="file" id="image-input" accept="image/*"/>
+            <button id="print-button" style="display: none;">打印照片</button>
+        </div>
+        <div class="preview-container">
+            <img id="image-preview" alt="图片预览"/>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 图片打印应用</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
