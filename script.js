@@ -10,8 +10,12 @@ document.getElementById('image-input').addEventListener('change', function() {
         // 预览图片
         var reader = new FileReader();
         reader.onload = function(e) {
-            document.getElementById('image-preview').src = e.target.result;
-            document.getElementById('image-preview').style.display = 'block';
+            var image = document.getElementById('image-preview');
+            image.src = e.target.result;
+            image.style.display = 'block';
+            
+            // 检测图片方向
+            checkImageOrientation(image);
         };
         reader.readAsDataURL(file);
     } else {
@@ -48,3 +52,10 @@ document.getElementById('print-button').addEventListener('click', function() {
         alert('打印失败，请重试');
     });
 });
+
+// 检测图片方向并添加相应的样式类
+function checkImageOrientation(image) {
+    if (image.naturalWidth > image.naturalHeight) {
+        image.classList.add('horizontal');
+    }
+}
