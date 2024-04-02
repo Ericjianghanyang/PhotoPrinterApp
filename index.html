@@ -3,28 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>照片预览与打印</title>
+    <title>照片打印应用</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>印相一体机应用</h1>
-    </header>
-    <main>
-        <div class="upload-container">
-            <label for="image-input" class="upload-button">选择图片</label>
+    <div class="container">
+        <div class="frame">
+            <label for="image-input" class="camera-button">
+                <img src="camera-icon.png" alt="相机图标"/>
+            </label>
             <input type="file" id="image-input" accept="image/*"/>
-        </div>
-        <div class="preview-container">
-            <div class="image-frame">
+            <div class="image-container">
                 <img id="image-preview" alt="照片预览"/>
-                <button id="print-button" class="upload-button" style="display: none;">打印照片</button>
             </div>
+            <button id="print-button" class="confirm-button" style="display: none;">确认打印</button>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 照片打印应用</p>
-    </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
